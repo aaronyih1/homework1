@@ -1,0 +1,35 @@
+Homework 1 Report 
+Aaron Yih 
+__________________________________________________________________________________________
+
+
+Invalid Test cases for #5:
+
+I tested 3 cases that would return an invalid answer.
+	• when numberSurveyed < preferVanilla + preferChocolate
+		-the numbers: numberSurveyed = 5; preferChocolate = 4; preferVanilla=3;
+		-result:80% prefer chocolate; 60% prefer vanilla; Chocolate is more popular than vanilla.
+		-conclusion: the total percentage is larger than 100% (140%)
+	•when numberSurveyed > preferVanilla + preferChocolate
+		-the numbers: numberSurveyed = 5; preferChocolate = 3; preferVanilla=1;
+		-result:60% prefer chocolate; 20% prefer vanilla; Chocolate is more popular than vanilla.
+		-conclusion: the total percentage is less than 100% (80%)
+	•when numberSurveyed = 0
+		-the numbers: numberSurveyed = 0; preferChocolate = 1; preferVanilla=2;
+		-result:inf% prefer chocolate; inf% prefer vanilla; Vanilla is more popular than vanilla.
+		-conclusion: the %’s are infinite and since inf% = inf% and not >, the conditional favors the else statement and outputs “Vanilla is more popular than chocolate”
+
+
+Logic Errors(#6):
+
+I pretended like I forgot to multiply the ratio of preferVanilla/numberSurveyed and preferChocolate/numberSurveyed in order to convert the values to percentages. This error was not caught by the compiler but output 0% for both preferVanilla and preferChocolate with values of numberSurveyed = 5; preferVanilla = 3; preferChocolate = 2.
+
+
+Compile/Runtime Errors (#7):
+
+The first compile error I introduced was by deleting the parentheses in the main function declaration. The compiler said “Expected ‘(‘for function-style cast or type construction. The syntax of a function mandates that the name of that function is followed by ‘()’. The compiler caught this.
+
+The second compile error I introduced was by deleting a semi-colon. The compiler game an error message: “Expected ‘;’ after top level declarator,” which is basically telling us that we need to include a semi-colon after a “top level declarator.”
+
+
+
